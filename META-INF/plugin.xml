@@ -1,0 +1,19 @@
+<idea-plugin version="2">
+    <name>Google Closure Soy Templates</name>
+    <description>Google Closure Soy Templates custom language plugin for IntelliJ IDEA</description>
+    <version>0.2.2</version>
+    <vendor email="vrungelru@gmail.com" url="http://shchekoldin.com/">Alexander Shchekoldin</vendor>
+    <idea-version since-build="107.587" />
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <application-components>
+        <component>
+            <implementation-class>net.intellij.plugins.soy.SoySupportLoader</implementation-class>
+        </component>
+    </application-components>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.parserDefinition language="soy" implementationClass="net.intellij.plugins.soy.parser.SoyParserDefinition" />
+    </extensions>
+</idea-plugin>
